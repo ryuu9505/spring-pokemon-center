@@ -1,6 +1,6 @@
 package com.example.pokemon.pokemon;
 
 public enum PokemonType {
-    ELECTRIC, FIRE, FLYING, GRASS, POISON
+    NORMAL, FIRE, WATER, ELECTRIC, GRASS, ICE, FIGHTING, POISON, GROUND, FLYING, PSYCHIC, BUG, ROCK, GHOST, DRAGON, DARK, STEEL, FAIRY
     ;
 }
