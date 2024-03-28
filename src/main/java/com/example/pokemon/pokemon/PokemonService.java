@@ -1,5 +1,6 @@
 package com.example.pokemon.pokemon;
 
+import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -17,11 +18,8 @@ public class PokemonService {
     }
 
     public Pokemon getPokemon(Integer pokemonId) {
-        Pokemon pokemon = pokemonRepository.findById(pokemonId).orElse(null);
-        if (pokemon == null) {
-            // todo throws exception
-        }
-        return pokemon;
+        return pokemonRepository.findById(pokemonId)
+                .orElseThrow(() -> new EntityNotFoundException("Pokemon not found with the given ID.")); // todo exception handling in global adviser
     }
 
     public Pokemon createPokemon(Pokemon pokemon) {
@@ -32,12 +30,11 @@ public class PokemonService {
         List<Pokemon> pokemons = new ArrayList<>();
 
         for (Integer pokemonId : pokemonCollection.getPokemonIds()) {
-            Pokemon pokemon = pokemonRepository.findById(pokemonId).orElse(null);
-            if (pokemon == null) {
-                // todo throws exception
-            }
+            Pokemon pokemon = pokemonRepository.findById(pokemonId)
+                    .orElseThrow(() -> new EntityNotFoundException("Pokemon not found with the given ID.")); // todo exception handling in global adviser
             pokemons.add(pokemon);
         }
+
         return pokemons;
     }
 }
