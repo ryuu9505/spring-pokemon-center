@@ -33,7 +33,7 @@ public class Pokemon {
 
     @Column(name = "type")
     @Enumerated(EnumType.STRING)
-    private List<PokemonType> type;
+    private List<PokemonType> type; // todo resolve error
 
     @Column(name = "weight")
     @Max(1_000_000)
