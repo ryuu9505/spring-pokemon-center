@@ -8,7 +8,6 @@ plugins {
 
 jacoco {
     toolVersion = "0.8.12"
-    reportsDirectory = layout.buildDirectory.dir('customJacocoReportDir')
 }
 
 sonarqube {
@@ -55,6 +54,6 @@ jacocoTestReport {
     reports {
         xml.required = false
         csv.required = false
-        html.outputLocation = layout.buildDirectory.dir('jacocoHtml')
+        html.required = true
     }
 }
