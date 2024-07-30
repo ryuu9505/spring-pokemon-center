@@ -1,10 +1,8 @@
 package com.example.pokemon;
 
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.ConfigurableApplicationContext;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
