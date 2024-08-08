@@ -1,5 +1,9 @@
-package com.example.pokemon.domain.pokemon;
+package com.example.pokemon.api.pokemon.controller;
 
+import com.example.pokemon.api.pokemon.dto.PokemonResponse;
+import com.example.pokemon.domain.pokemon.Pokemon;
+import com.example.pokemon.domain.pokemon.PokemonCollection;
+import com.example.pokemon.domain.pokemon.PokemonService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -15,7 +19,7 @@ public class PokemonController {
     private final PokemonService pokemonService;
 
     @GetMapping(value = "/{pokemonId}")
-    public Pokemon getPokemon(@PathVariable("pokemonId") Integer pokemonId) {
+    public PokemonResponse getPokemon(@PathVariable("pokemonId") Integer pokemonId) {
         return pokemonService.getPokemon(pokemonId);
     }
 
@@ -25,7 +29,7 @@ public class PokemonController {
     }
 
     @GetMapping(value = "/params")
-    public Pokemon getPokemonRequestParam(@RequestParam("pokemonId") Integer pokemonId)  {
+    public PokemonResponse getPokemonRequestParam(@RequestParam("pokemonId") Integer pokemonId)  {
         return pokemonService.getPokemon(pokemonId);
     }
 

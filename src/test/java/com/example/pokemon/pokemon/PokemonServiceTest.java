@@ -1,5 +1,6 @@
 package com.example.pokemon.pokemon;
 
+import com.example.pokemon.api.pokemon.dto.PokemonResponse;
 import com.example.pokemon.domain.pokemon.*;
 import jakarta.persistence.EntityNotFoundException;
 import org.junit.jupiter.api.BeforeEach;
@@ -71,10 +72,11 @@ class PokemonServiceTest {
                 .weight(6.0)
                 .height(0.4)
                 .build();
+        PokemonResponse pokemonResponse = PokemonResponse.of(pokemon);
 
         when(pokemonRepository.findById(1)).thenReturn(Optional.of(pokemon));
 
-        Pokemon result = pokemonService.getPokemon(1);
+        PokemonResponse result = pokemonService.getPokemon(1);
 
         assertThat(result).isNotNull();
         assertThat(result.getId()).isEqualTo(1L);
