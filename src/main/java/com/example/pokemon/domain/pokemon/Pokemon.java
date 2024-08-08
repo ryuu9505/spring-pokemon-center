@@ -35,9 +35,11 @@ public class Pokemon extends BaseTimeEntity {
     @Column(name = "species")
     private String species;
 
-    @Column(name = "type")
+    @ElementCollection(targetClass = PokemonType.class)
     @Enumerated(EnumType.STRING)
-    private List<PokemonType> type; // todo resolve error
+    @CollectionTable(name = "pokemon_type", joinColumns = @JoinColumn(name = "pokemon_id"))
+    @Column(name = "type")
+    private List<PokemonType> type;
 
     @Column(name = "weight")
     @Max(1_000_000)
