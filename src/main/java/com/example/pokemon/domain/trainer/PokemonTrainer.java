@@ -1,4 +1,4 @@
-package com.example.pokemon.trainer;
+package com.example.pokemon.domain.trainer;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;

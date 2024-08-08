@@ -1,4 +1,4 @@
-package com.example.pokemon.pokemon;
+package com.example.pokemon.domain.pokemon;
 
 import org.springframework.data.repository.CrudRepository;
 

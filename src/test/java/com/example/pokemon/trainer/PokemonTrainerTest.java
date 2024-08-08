@@ -1,5 +1,7 @@
 package com.example.pokemon.trainer;
 
+import com.example.pokemon.domain.trainer.GenderType;
+import com.example.pokemon.domain.trainer.PokemonTrainer;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

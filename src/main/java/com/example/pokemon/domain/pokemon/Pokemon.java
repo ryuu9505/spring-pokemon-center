@@ -1,4 +1,4 @@
-package com.example.pokemon.pokemon;
+package com.example.pokemon.domain.pokemon;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Max;

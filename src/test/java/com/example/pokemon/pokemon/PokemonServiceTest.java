@@ -1,5 +1,6 @@
 package com.example.pokemon.pokemon;
 
+import com.example.pokemon.domain.pokemon.*;
 import jakarta.persistence.EntityNotFoundException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

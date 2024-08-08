@@ -1,5 +1,6 @@
 package com.example.pokemon.pokemon;
 
+import com.example.pokemon.domain.pokemon.Pokemon;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-import static com.example.pokemon.pokemon.PokemonType.ELECTRIC;
+import static com.example.pokemon.domain.pokemon.PokemonType.ELECTRIC;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 

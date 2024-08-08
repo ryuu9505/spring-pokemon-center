@@ -1,4 +1,4 @@
-package com.example.pokemon.trainer;
+package com.example.pokemon.domain.trainer;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
