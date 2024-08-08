@@ -1,7 +1,7 @@
 package com.example.pokemon.domain.pokemon;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface PokemonRepository extends CrudRepository<Pokemon, Integer> {
+public interface PokemonRepository extends JpaRepository<Pokemon, Integer> {
 
 }
