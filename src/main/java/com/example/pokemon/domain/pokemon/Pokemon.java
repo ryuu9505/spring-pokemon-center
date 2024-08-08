@@ -1,5 +1,6 @@
 package com.example.pokemon.domain.pokemon;
 
+import com.example.pokemon.domain.BaseTimeEntity;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
@@ -16,7 +17,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Pokemon {
+public class Pokemon extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
